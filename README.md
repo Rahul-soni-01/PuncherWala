@@ -54,7 +54,7 @@ A Laravel-based platform connecting vehicle owners with certified mechanics for 
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/PuncherWala.git
+git clone https://github.com/Rahul-soni-01/PuncherWala.git
 cd PuncherWala
 
 # Install dependencies

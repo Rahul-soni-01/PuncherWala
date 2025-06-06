@@ -26,4 +26,8 @@ class Service extends Model
     {
         return $this->hasMany(Inquiry::class);
     }
+    public function garage()
+    {
+        return $this->belongsTo(\App\Models\Garage::class);
+    }
 }

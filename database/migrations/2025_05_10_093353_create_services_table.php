@@ -13,8 +13,12 @@ return new class extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->id();
-            $table->string('name'); // Puncture repair, car wash, etc.
+            $table->foreignId('garage_id')->constrained()->onDelete('cascade');
+            $table->string('name'); // e.g., Puncture Repair, Car Wash
             $table->text('description')->nullable();
+            $table->decimal('base_price', 8, 2);
+            $table->decimal('per_km_charge', 8, 2)->nullable(); // For mobile services
+            $table->boolean('is_available')->default(true);
             $table->timestamps();
         });
     }

@@ -46,4 +46,8 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+    public function garage()
+    {
+        return $this->hasOne(Garage::class);
+    }
 }
